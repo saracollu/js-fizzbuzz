@@ -13,12 +13,36 @@ proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro program
 
 
 /*
-1-dichiarare variabile da stampare in console
-2-impostare un loop con la variabile che aumenta di una unità a ogni ciclo partendo da 1 fino a 100
-3-impostare con IF ELSE  le condizioni per: 1) i multipli di 3, 2) per quelli di 5 e 3) per quelli di entrambi
+1-impostare un loop con la variabile che aumenta di una unità a ogni ciclo partendo da 1 fino a 100
+2-impostare con IF ELSE  le condizioni per: 1) i multipli di 3, ma non se sono anche multipli di 5
+2) per quelli di 5, ma non se lo sono anche di 3,  e 3) per quelli di entrambi;
+3-impostare di visualizzare in console il numero solo se non è multiplo nè di 3 nè di 5
 */
 
-for(let i = 1; i<=101; i++) {
-    console.log(i);
+for(let i = 1; i<=100; i++) {
     
+    
+    if (i != i%3 && i%5) {
+        console.log(i);
+
+    } else if(i%3 == 0) {
+        let fizz = "Fizz"
+        console.log(fizz);
+
+    } else if (i%5 == 0) {
+        let buzz = "Buzz"
+        console.log(buzz);
+        
+    } else if (i%3 == 0 && i%5 == 0) {
+        let fizzBuzz = "FizzBuzz"
+        console.log(fizzBuzz);
+        
+    }
 }
+
+/*else if (i%5 == 0 && i != (i%3 == 0)) {
+        let buzz = "Buzz"
+        console.log(buzz);
+        
+    } 
+    */
