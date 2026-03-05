@@ -22,10 +22,14 @@ proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro program
 for(let i = 1; i<=100; i++) {
     
     
-    if (i != i%3 && i%5) {
+    if (i%3 != 0 && i%5 != 0) {
         console.log(i);
 
-    } else if(i%3 == 0) {
+    } else if (i%3 == 0 && i%5 == 0) {
+        let fizzBuzz = "FizzBuzz"
+        console.log(fizzBuzz);
+        
+    } else if (i%3 == 0) {
         let fizz = "Fizz"
         console.log(fizz);
 
@@ -33,11 +37,7 @@ for(let i = 1; i<=100; i++) {
         let buzz = "Buzz"
         console.log(buzz);
         
-    } else if (i%3 == 0 && i%5 == 0) {
-        let fizzBuzz = "FizzBuzz"
-        console.log(fizzBuzz);
-        
-    }
+    } 
 }
 
 /*else if (i%5 == 0 && i != (i%3 == 0)) {
